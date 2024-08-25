@@ -2,6 +2,7 @@ package uniandes.dpoo.estructuras.logica;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -63,10 +64,14 @@ public class SandboxListas
     {
         int[] nuevoArreglo = new int[listaEnteros.size()];
         int i = 0;
+      
+        Iterator<Integer> iterador = listaEnteros.iterator();
         
-        for (int entero : listaEnteros) {
-        	nuevoArreglo[i] = entero;
-        	i++;
+        while (iterador.hasNext()) 
+        {
+        Integer entero = iterador.next();
+    	nuevoArreglo[i] = entero;
+    	i++;
         }
         
         return nuevoArreglo;
